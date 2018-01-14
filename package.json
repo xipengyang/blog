@@ -17,8 +17,12 @@
     "gatsby-transformer-remark": "^1.7.26"
   },
   "keywords": [
-    "gatsby"
+    "personal blog"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xipengyang/my-blog.git"
+  },
   "license": "MIT",
   "main": "n/a",
   "scripts": {

@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `xipengyang.github.io`,
+  pathPrefix: `/blog`,
   siteMetadata: {
     title: `Gatsby Default Starter`,
   },
