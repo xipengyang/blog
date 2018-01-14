@@ -5,7 +5,7 @@ title: "Using viewport percentage length to dynamically change the list height b
 tags: ['css']
 ---
 
-We have a dropdown that shows a number of sites for a customer. We want to change the dropdown menu's height dynamically dependents on user's browser size.
+We have a list insides a parent container. We want parent container's height to grow as much as possible to avoid a scrollbar to be shown. 
 
 For example, we want the scroll bar to display on a small screen (e.g. 13' Macbook Air 1440 px x 900px) when the content breaks out its bound:
 
@@ -15,13 +15,16 @@ When user's screen is on a large device, and there is enough space for all items
 
 ![](./lg.png "Large Screen")
 
-It is straight forward to display and hide the scrollbar at a certain height. e.g. with css just use overflow-y:scroll and define the max height: xxxpx.
+It is straight forward to implement this with css, just use `overflow-y` and  `max-height` properties to define scrollbar to appear at height 70px.
 
 ```css
 overflow-y: scroll;
-max-height: 70vh;
+max-height: 70px;
 ```
 
-However, this solution doesn't scale according to screen size.  Because the max height value is different for each screen size. We could use CSS media query to solve this issue. The better solution is through use of the view port units.
+With the help of media query, we can make sure the max-height value scale according to screen size. But I have found a new way to set the max-height dynamically depending on user's device, the new way is through use of the view port units.
 
+## Viewport and Viewport Units
+The viewport is the user's visible area of a web page. Viewport size can be tricky on mobile browsers. Apple has invented the "viewport meta tag" to allow the viewport to be configurable. However we are going to focus on destop browser in today's scope.
 
+The view port units - `vw`, `vh`, `vmin`, and `vmax` - work similarly to existing length units like px or em, but represent a percentage of the current browser viewport.
