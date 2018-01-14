@@ -33,5 +33,9 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      - run: git config user.name "David Yang"
+
+      - run: git config user.email "xipengyang@gmail.com"
+
       # deploy!
       - run: yarn deploy
