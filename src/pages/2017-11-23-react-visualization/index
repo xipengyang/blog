@@ -1,0 +1,4 @@
+For web apps built around an MVC like React, it’s probably not a good idea to use D3.js directly as the way it interacts with data and the DOM would overlap with react framework.
+
+React document says 'React is unaware of changes made to the DOM outside of React. It determines updates based on its own internal representation, and if the same DOM nodes are manipulated by another library, React gets confused and has no way to recover.'
+
