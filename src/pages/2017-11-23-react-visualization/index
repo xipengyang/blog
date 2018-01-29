@@ -1,4 +1,8 @@
-For web apps built around an MVC like React, it’s probably not a good idea to use D3.js directly as the way it interacts with data and the DOM would overlap with react framework.
+When you are creating one-off visulizations, D3 is probably the most comprehensive tools around. However for web apps built around an MVC like React, it’s probably not a good idea to use D3.js directly as the way it interacts with the DOM would overlap with react framework. The React doc has stated 'if the same DOM nodes are manipulated by another library, React gets confused and has no way to recover.' D3.js requires direct manipulation on the DOM.
 
-React document says 'React is unaware of changes made to the DOM outside of React. It determines updates based on its own internal representation, and if the same DOM nodes are manipulated by another library, React gets confused and has no way to recover.'
+In this article I am evaluating three approaches of creating visulization in the Web app built around React: 
+D3.js + DOM like Structure that renders to React, 
+composable and declarative D3 React components Library, 
+pure javascript library that is based on cavans API. 
 
+However I won't be going deep into each of these libraries. I will create a simple line chart using three libraries and lays down some comparision on the learning effort, coding effort and extension effort that I have experienced.  
